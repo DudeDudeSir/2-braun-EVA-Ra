@@ -85,7 +85,7 @@ async def next_page(bot, query):
 
     btn.insert(0, 
         [
-            InlineKeyboardButton(f'🔻⭕🔺 {search} 🔺⭕🔻', 'reqst1')
+            InlineKeyboardButton(f'🔻🔺 {search} 🔺🔻', 'reqst1')
         ]
     )
     btn.insert(1,
@@ -430,10 +430,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
         ], [
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('💢Group', url='https://t.me/moviecenter225')
+            InlineKeyboardButton('♦️Group♦️', url='https://t.me/moviecenter225')
         ], [
-            InlineKeyboardButton('🔥 Help', callback_data='help'),
-            InlineKeyboardButton('👹 About', callback_data='about')
+            InlineKeyboardButton('🔥 Help 💥', callback_data='help'),
+            InlineKeyboardButton('🔻 About🔺', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -461,8 +461,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('♻️ Group', url='https://t.me/moviecenter225'),
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('💐 Group 💐', url='https://t.me/moviecenter225'),
+            InlineKeyboardButton('🦋 Source 🦋', callback_data='source')
         ], [
             InlineKeyboardButton('🏠 Home', callback_data='start'),
             InlineKeyboardButton('🔐 Close', callback_data='close_data')

@@ -75,7 +75,7 @@ async def start(client, message):
         if message.command[1] != "subscribe":
             kk, file_id = message.command[1].split("_", 1)
             pre = 'checksubp' if kk == 'filep' else 'checksub' 
-            btn.append([InlineKeyboardButton(" 🔄 Try Again", callback_data=f"{pre}#{file_id}")])
+            btn.append([InlineKeyboardButton(" 🔺🔻 Try Again", callback_data=f"{pre}#{file_id}")])
         await client.send_message(
             chat_id=message.from_user.id,
             text=f"""**♦️ 𝗥𝗘𝗔𝗗 𝗧𝗛𝗜𝗦 𝗜𝗡𝗦𝗧𝗥𝗨𝗖𝗧𝗜𝗢𝗡 ♦️\n\nനിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിരിക്കണം. ജോയിൻ ചെയ്യാൻ "  𝗝𝗼𝗶𝗻 UPDATES  𝗖𝗵𝗮𝗻𝗻𝗲𝗹  "എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്.\n\nജോയിൻ ചെയ്ത ശേഷം "  𝗧𝗿𝘆 𝗔𝗴𝗮𝗶𝗻  " എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ അയച്ചു തരുന്നതാണ്..\n\nJOIN UPDATES CHANNEL AND THEN CLICK TRY AGAIN BUTTON TO GET MOVIE FILE**""",
@@ -91,7 +91,7 @@ async def start(client, message):
             InlineKeyboardButton('💠 𝐆𝐑𝐎𝐔𝐏 💠', url='https://t.me/moviecenter225')
             ],[
             InlineKeyboardButton('♻️ Help ♻️', callback_data='help'),
-            InlineKeyboardButton('🔥 About 🔥', callback_data='about')
+            InlineKeyboardButton('♥️ About ♥️', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
